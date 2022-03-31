@@ -12,11 +12,23 @@ func main() {
 	fmt.Println("Enter second number: ")
 	fmt.Scanln(&num2)
 
-	for i := num1; i <= num2; i++ {
-		fmt.Println(i)
-	}
+	if num1 < num2 {
+		for i := num1; i <= num2; i++ {
+			fmt.Println(i)
+		}
 
-	for i := num2; i >= num1; i-- {
-		fmt.Println(i)
+		for i := num2; i >= num1; i-- {
+			fmt.Println(i)
+		}
+	} else if num1 > num2 {
+		for i := num2; i <= num1; i++ {
+			fmt.Println(i)
+		}
+
+		for i := num1; i >= num2; i-- {
+			fmt.Println(i)
+		}
+	} else {
+		fmt.Println("Error")
 	}
 }
